@@ -367,7 +367,7 @@ function refreshFL(event) {
                 var t = document.createElement("DIV");  
                 t.innerHTML = name;
                 if (s.val().photoURL) imgDiv.style.backgroundImage = "url("+ s.val().photoURL +")";
-                else imgDiv.style.backgroundImage = "url(../img/userPhoto.jpg)";
+                else imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)";
                 div.appendChild(imgDiv);      
                 div.appendChild(t);                                
                 bshow.appendChild(div);
@@ -408,7 +408,7 @@ function refreshG(event) {
                 var t = document.createElement("DIV");  
                 t.innerHTML = name;
                 if (s.val().photoURL) url = "url("+ s.val().photoURL +")";
-                else url = "url(../img/userPhoto.jpg)";
+                else url = "url(img/userPhoto.jpg)";
                 imgDiv.style.backgroundImage = url;
                 div.appendChild(imgDiv);      
                 div.appendChild(t);                                
@@ -489,7 +489,7 @@ function goGChat(event, a) {
                         name = s.val().name;
                         if (s.val().photoURL)
                         url = s.val().photoURL;
-                        else url = "../img/userPhoto.jpg";
+                        else url = "img/userPhoto.jpg";
                         
                        
                     }); */
@@ -515,7 +515,7 @@ function goGChat(event, a) {
                             var url;
                             if (s.val().photoURL)
                             url = s.val().photoURL;
-                            else url = "../img/userPhoto.jpg";
+                            else url = "img/userPhoto.jpg";
                             
                         }); */
                     }
@@ -629,7 +629,7 @@ function goChat(event, FLID) {
                         name = s.val().name;
                         if (s.val().photoURL)
                         url = s.val().photoURL;
-                        else url = "../img/userPhoto.jpg";
+                        else url = "img/userPhoto.jpg";
                         
                        
                     }); */
@@ -655,7 +655,7 @@ function goChat(event, FLID) {
                             var url;
                             if (s.val().photoURL)
                             url = s.val().photoURL;
-                            else url = "../img/userPhoto.jpg";
+                            else url = "img/userPhoto.jpg";
                             
                         }); */
                     }
