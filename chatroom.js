@@ -886,7 +886,10 @@ firebase.auth().onAuthStateChanged(function(user) {
             var t = document.createElement("DIV");  
             t.innerHTML = name;
             if (childSnapshot.val().photoURL) imgDiv.style.backgroundImage = "url("+ childSnapshot.val().photoURL +")";
-            else imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)";
+            else {
+                imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)"
+                console.log("no pho");
+            };
             div.appendChild(imgDiv);      
             div.appendChild(t);                                // Append the text to <button>
             ashow.appendChild(div);
@@ -913,7 +916,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     loginChange(user);
     
-    console.log("User is logined", user)
+    console.log("User is logined", user);
   } else {
     userLogin = null;
     console.log("User is not logined yet.");

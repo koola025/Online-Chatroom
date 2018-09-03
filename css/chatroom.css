@@ -519,7 +519,7 @@ input[type="file"] {
     height:50px;
     margin:auto;
     border-radius: 25px;
-    background-image: url('https://koola025.github.io/Online-Chatroom/img/userPhoto.jpg');
+    background-image: url('img/userPhoto.jpg');
     background-size: cover;
     background-position: center;
     
