@@ -751,7 +751,7 @@ function refreshFR(event) {
         if (count == 0) {
             console.log("empty r " + count);
             var emptyDiv = document.createElement("DIV");
-            emptyDiv.style.backgroundImage = "url(../img/noFR.png)";
+            emptyDiv.style.backgroundImage = "url(img/noFR.png)";
             emptyDiv.setAttribute("class","emptyDiv");
             cshow.appendChild(emptyDiv);
         }
