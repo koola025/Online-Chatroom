@@ -1,35 +1,4 @@
-# Software Studio 2018 Spring Midterm Project
-## Notice
-* Replace all [xxxx] to your answer
-
-## Topic
-* Chat room
-* Key functions 
-    1. chat 
-    2. load message history
-    3. chat with new user(add friend)
-* Other functions 
-    1. change personal photo
-    2. send picture in chat room
-    3. create group chat
-
-## Basic Components
-|Component|Score|Y/N|
-|:-:|:-:|:-:|
-|Membership Mechanism|20%|Y|
-|GitLab Page|5%|Y|
-|Database|15%|Y|
-|RWD|15%|Y|
-|Topic Key Function|15%|Y|
-
-## Advanced Components
-|Component|Score|Y/N|
-|:-:|:-:|:-:|
-|Third-Party Sign In|2.5%|Y|
-|Chrome Notification|5%|N|
-|Use CSS Animation|2.5%|Y|
-|Security Report|5%|Y|
-|Other functions|1~10%|Y|
+# Online Chatroom
 
 ## Website Detail Description
 - Login Page
@@ -117,39 +86,3 @@
     Click on a friend from friend page and you can chat and send pictures with that friend. The title above shows the friend's name.
 
     <img src="/public/reportimg/21.png" width = 400px>
-
-
-
-
-- CSS animation
-
-    1. Jumpy Camera Button
-
-        When the mouse hovers on the camera button, it bounces.
-    
-        <img src="/public/reportimg/22.png" width = 400px>
-
-    2. Shiny Top Bar
-
-        The top bar shines.
-
-        <img src="/public/reportimg/23.png" width = 600px>
-    
-    3. Scroll message
-
-        The message automatically scrolls to the bottom (the newest message).
-
-- RWD
-    
-    It still fits well in different sizes of screens.   
-
-    <img src="/public/reportimg/24.png" height = 300px>
-    
-    <img src="/public/reportimg/25.png" height = 300px>
-    
-    <img src="/public/reportimg/26.png" height = 300px>
-
-
-## Security Report (Optional)
-
-With rules written, only the user that is logged in can change his own datas.
