@@ -886,7 +886,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             var t = document.createElement("DIV");  
             t.innerHTML = name;
             if (childSnapshot.val().photoURL) imgDiv.style.backgroundImage = "url("+ childSnapshot.val().photoURL +")";
-            else imgDiv.style.backgroundImage = "url('img/userPhoto.jpg')";
+            else imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)";
             div.appendChild(imgDiv);      
             div.appendChild(t);                                // Append the text to <button>
             ashow.appendChild(div);
