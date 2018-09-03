@@ -1,0 +1,32 @@
+[debug] [2018-04-25T08:38:50.180Z] ----------------------------------------------------------------------
+[debug] [2018-04-25T08:38:50.184Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2018-04-25T08:38:50.184Z] CLI Version:   3.18.4
+[debug] [2018-04-25T08:38:50.184Z] Platform:      darwin
+[debug] [2018-04-25T08:38:50.184Z] Node Version:  v9.11.1
+[debug] [2018-04-25T08:38:50.185Z] Time:          Wed Apr 25 2018 16:38:50 GMT+0800 (CST)
+[debug] [2018-04-25T08:38:50.185Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-25T08:38:50.198Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-25T08:38:50.198Z] > authorizing via signed-in user
+[debug] [2018-04-25T08:38:50.200Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/midtermproject-105061137  
+  
+ Wed Apr 25 2018 16:38:50 GMT+0800 (CST)
+[debug] [2018-04-25T08:38:51.410Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-25T08:38:51.411Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/midtermproject-105061137/tokens  
+  
+ Wed Apr 25 2018 16:38:51 GMT+0800 (CST)
+[debug] [2018-04-25T08:38:52.197Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-25T08:38:52.198Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/midtermproject-105061137  
+  
+ Wed Apr 25 2018 16:38:52 GMT+0800 (CST)
+[debug] [2018-04-25T08:38:53.243Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/Starla/106下/軟實/Midterm_Project'...
+[info] 
+[debug] [2018-04-25T08:38:53.246Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/947157583453/clients/_:getWebAppConfig  
+  
+ Wed Apr 25 2018 16:38:53 GMT+0800 (CST)
+[debug] [2018-04-25T08:38:53.963Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

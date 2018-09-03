@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <link href="https://fonts.googleapis.com/css?family=Gamja+Flower" rel="stylesheet">
+    <meta charset="utf-8" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Midterm Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-storage.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
+
+    <script src="config.js"></script>
+    <link rel = "stylesheet" type = "text/css" href = "css/chatroom.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid" id="landingPage">
+        <div id="loginBox">
+            <form id="loginForm">
+                <button type="button" class="btn btnPink" id="gosu">Sign Up Now!</button>
+                <hr class="newhr">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Password">
+                </div>
+                <!--
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                </div>-->
+                <div id="loginOut"><button type="button" class="btn btnPink" id="btnLogin">Login</button></div>
+                <hr class="newhr">
+                <div id="googleOut"><button type="button"  id="btnGoogle"></button>Login with Google</div>
+                
+            </form>
+        </div>
+    
+        <div id="signUpBox" style="display: none;">
+            <form id="signUpForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="txtEmail2" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="txtPassword2" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Username</label>
+                    <input class="form-control" id="userName" placeholder="Username">
+                </div>
+                    
+                
+                <button type="button" class="btn btnPink" id="btnSignUp">Sign Up</button>
+                <button type="button" class="btn btn-secondary" id="cancelSignUp">Cancel</button>
+                
+                
+                    
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id = "modalTitle"></h5>
+                <!--  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> 
+                    <span aria-hidden="true">&times;</span>
+                  </button> -->
+                </div>
+                <div class="modal-body">
+                  <div id="modalPic"></div>
+                </div>
+                <div id="modalFooter">
+                    <button type="button" class="btn btnPink" id="btnAcceptFR" data-dismiss="modal" style="display: none;">Accept</button>
+                    <button type="button" class="btn btnPink" id="btnAddFriend" data-dismiss="modal" style="display: none;">Add friend</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div class="modal" id="groupModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" id="GmodalHeader">
+                  <h5 class="modal-title" id = "groupModalTitle">New Group</h5>
+                </div>
+                <div class="modal-body">
+                       <div id = "groupAddTop">
+                            <label>Group Name</label>
+                            <input class="form-control" id="groupNaming" placeholder="Name..." >
+                    
+                        <div  id = "cameraGOut">
+                            <input type="file" id="chooseGPic" accept="image/*"/ >
+                            <label id="cameraG" for="chooseGPic"></label>
+                        </div>
+                       </div> 
+                    <div id="gaFriends">
+                        <label>Friends</label> 
+                        <div id="groupFL" class="ishadow"></div>
+                    </div>  
+                    <div id="gaSelected">
+                        <label>Selected</label>
+                        <div id="groupAdded" class="ishadow"></div>
+                    </div>  
+                  
+                </div>
+                <div id="groupModalFooter">
+                    <button type="button" class="btn btnPink" id="btnCreateGroup" data-dismiss="modal">Create</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+    </div>
+    <div id="wrapper" style="display: none;">
+
+                <!-- Sidebar -->
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <!-- <li class="sidebar-brand"> -->
+                        
+                            <input type="file" id="filePicker" accept="image/*"/ >
+                            <label id="userPhoto" for="filePicker">
+                                <!-- <label class="nav-link" style="margin:0;">
+                                    
+                                    Upload File
+                                    </label>  -->
+                                </label>
+                        <!-- </li> -->
+                        <!--
+                        <li>
+                            <form class="form-inline">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                        -->
+                        <li>
+                            <a href="" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="btnUsers">Users</a>
+                        </li>
+                       
+
+
+                        <li>
+                            <a href="" class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="btnFriends">Friends</a>
+                        </li>
+                        
+
+
+                        <li>
+                            <a href="" class="collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseFour" id="btnG">Groups</a>
+                        </li>
+                        
+                        <li>
+                                <a href="" class="collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapseThree" id="btnFR">Requests</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+                <!-- /#sidebar-wrapper -->
+        
+                <!-- Page Content -->
+                <!--<div id="page-content-wrapper">
+                    <div class="container-fluid">-->
+                        <div id="topBar">
+                            <a style="float: left;" href="#menu-toggle" class="btn btn-light tb" id="menu-toggle"></a>
+                            <label id="topTitle">Friends</label>
+                            <button style="float: right;" type="button" class="btn btn-light tb" id="btnSignOut"></button>
+                        </div>
+
+                        <div id="userBox" style="display: none;">
+                            
+                                <div class="card-body" id="ashow" >
+                                        <div id="emptyDivU" class="emptyDiv" style="background-image: url('../img/noU.png');"></div>
+                                </div>
+                            
+                        </div>
+
+                        <div id="friendBox">
+                            
+                                <div class="card-body" id="bshow">
+                                    <div id="emptyDivF" class="emptyDiv" style="background-image: url('../img/noF.png');">dsd</div>
+                                </div>
+                            
+                        </div>
+
+                        <div id="groupBox">
+                            
+                                <div class="card-body" id="dshow">
+                                        
+                                </div>
+                                <div id = "addOut"><button  class="btn btnPink" id="btnAddGroup" data-toggle="modal" data-target="#groupModal">Add</button></div>
+                                
+                        </div>
+
+                        <div id="requestsBox">
+                            
+                                <div class="card-body" id="cshow">
+                                        <div id="emptyDivFR" class="emptyDiv" style="background-image: url('../img/noFR.png');"></div>
+                                </div>
+                            
+                        </div>
+
+
+                        <div id="messageBox" style="display: none;">
+                                <!--
+                                <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+                                -->
+                            <div class="form-group">
+                                <div id = "history"></div>
+                                <div id = "messageInput">
+                                <form id="sendForm">
+                                        <input type="file" id="sendPic" accept="image/*"/ >
+                                        <label id="camera" for="sendPic"></label>
+                                <input class="form-control" id="messageText" placeholder="Message..." >
+                                <button type="submit" class="btn btnPink" id="btnSend">Send</button>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                <!--  
+                    </div>
+                </div>-->
+                <!-- /#page-content-wrapper -->
+        
+    </div>
+    <!-- /#wrapper -->
+        
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+    <script type="text/javascript" src="chatroom.js"></script>
+</body>
+</html>

@@ -1,0 +1,592 @@
+
+label {
+  margin:0px;
+}
+#landingPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: pink;
+}
+
+#loginBox {
+  position: absolute;
+  background-color: rgb(65, 65, 65);
+  color: white;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  height: 380px;
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.newhr{
+  border-top: 1px solid white;
+}
+#signUpBox {
+  position: absolute;
+  color: white;
+  background-color: rgb(65, 65, 65);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 300px;
+  height: 380px;
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#btnSignUp {
+  width: 200px;
+  margin-left: 30px;
+}
+
+#cancelSignUp {
+  margin-top: 20px;
+  width: 200px;
+  margin-left: 30px;
+}
+
+#messageBox {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(65, 65, 65);
+  height: calc(100vh - 120px);
+  margin: 30px;
+  width: auto;
+  
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#friendBox {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(65, 65, 65);
+  overflow: scroll;
+  
+  height: calc(100vh - 120px);
+  
+  margin: 30px;
+  padding: 20px;
+  width: auto;
+  
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  
+}
+
+#userBox {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(65, 65, 65);
+  overflow: scroll;
+  
+  height: calc(100vh - 120px);
+  
+  margin: 30px;
+  padding: 20px;
+  width: auto;
+  
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  
+}
+
+#groupBox {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(65, 65, 65);
+  
+  overflow: scroll;
+  
+  height: calc(100vh - 120px);
+  
+  margin: 30px;
+  padding: 20px;
+  width: auto;
+  
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  
+}
+
+
+#requestsBox {
+  font-family: 'Gamja Flower', cursive;
+  background-color: rgb(65, 65, 65);
+  overflow: scroll;
+  
+  height: calc(100vh - 120px);
+  
+  margin: 30px;
+  padding: 20px;
+  width: auto;
+  
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+  border-radius: 10px;
+  
+}
+
+
+#topBar {
+  width: 100%;
+  height: 60px;
+  background-color:pink;
+  text-align: center;
+  padding: 10px;
+  box-shadow: rgba(51, 51, 102, 0.3) 1px 1px 2px;
+  
+}
+
+#topTitle{
+  color: rgb(65, 65, 65);
+  text-shadow: 1px 1px 1px grey;
+  height: 35px;
+  font-size: 30px;
+  vertical-align: middle;
+  font-family: 'Gamja Flower', cursive;
+}
+
+#camera {
+  
+  width:38px;
+  height:38px;
+  border-radius: 19px;
+  margin-right: 5px;
+  background-image: url("../img/camera.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:pink;
+  float: left;
+
+  
+}
+#cameraG {
+  
+  width:38px;
+  height:38px;
+  border-radius: 19px;
+  margin-right: 5px;
+  background-image: url("../img/camera.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:pink;
+  float: left;
+
+  
+}
+#cameraGOut {
+  height:38px;
+  float: left;
+  margin-left: 10px;
+}
+
+#groupAddTop {
+  height:75px;
+}
+#camera:hover {
+  
+  width:38px;
+  height:38px;
+  border-radius: 19px;
+  margin-right: 5px;
+  background-image: url("../img/camera.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color:pink;
+  float: left;
+
+  animation-name: jump;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  
+}
+
+
+
+#wrapper {
+  height: 100vh;
+}
+
+#ashow {
+  color: pink;
+}
+
+#bshow {
+  color: pink;
+  
+}
+
+#cshow {
+  color: pink;
+}
+#dshow {
+  color: pink;
+}
+
+
+
+#history {
+  overflow: auto;
+  height : calc(100% - 50px);
+}
+
+#userPhoto {
+  width: 50px;
+  height:50px;
+  margin:25px;
+  border-radius: 25px;
+  background-image: url('../img/userPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255, 255, 255, 0);
+}
+
+#exampleModal {
+  width: 250px;
+  height:250px;
+  position: absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom: 0px;
+  margin:auto;
+  text-align: center;
+}
+
+#modalTitle {
+  margin:auto;
+}
+
+#modalPic {
+  width: 100px;
+  height:100px;
+  margin:auto;
+  border-radius: 50px;
+  background-image: url('../img/userPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255, 255, 255, 0);
+}
+
+#groupModal {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  top:0px;
+  right:0px;
+  left:0px;
+  bottom: 0px;
+  margin:auto;
+  
+}
+#GmodalHeader{
+  text-align: center;
+  padding: auto;
+}
+#groupModalTitle {
+  text-align: center;
+  float: center;
+  margin:auto;
+}
+#groupNaming {
+  width: 210px;
+  float: left;
+}
+#gaFriends {
+  height: 140px;
+  
+}
+#gaSelected {
+  height: 140px;
+  
+}
+#groupFL {
+  height: 100px;
+  overflow: scroll;
+}
+#groupAdded {
+  height: 100px;
+  overflow: scroll;
+}
+#btnAddGroup {
+  width: 50px;
+  height:50px;
+  border-radius: 25px;
+}
+#groupModalFooter {
+  height:50px;
+  text-align: center;
+}
+.ishadow {
+  border-radius: 5px;
+  -moz-box-shadow:    inset 0 0 5px #000000;
+  -webkit-box-shadow: inset 0 0 5px #000000;
+  box-shadow:         inset 0 0 5px #000000;
+}
+#addOut {
+  position: absolute;
+  width: 50px;
+  height:50px;
+  margin-top:auto;
+  margin-left:auto;
+  right:50px;
+  bottom:50px;
+  border-radius: 25px;
+}
+.btnPink {
+  background-color: pink;
+  border-color:pink;
+  color:white;
+}
+.modal-content {
+  height: 100%;
+}
+
+.modal-dialog {
+  height: 100%;
+  margin:0px;
+}
+
+.sendPicDiv {
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center;
+  
+}
+.messageP {
+  float: left;
+}
+.aaa {
+  height: auto;
+  border-bottom: 1px solid lightgray ;
+  margin:5px;
+  padding:5px;
+}
+
+#head {
+  float: left;
+  width: 50px;
+  height:50px;
+  margin:5px;
+  border-radius: 25px;
+  background-image: url('../img/userPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255, 255, 255, 0);
+}
+
+#btnGoogle {
+  width: 40px;
+  height:40px;
+  margin-right: 10px;
+  vertical-align: middle;
+  border-radius: 20px;
+  background-image: url('../img/google.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color:rgba(255, 255, 255, 0);
+  box-shadow: rgba(51, 51, 102, 0.3) 2px 2px 12px;
+}
+#gosu{
+  width: 200px;
+  margin-left: 30px;
+}
+#btnLogin {
+  
+
+  width: 200px;
+  margin-left: 30px;
+
+}
+
+#googleOut {
+  padding: auto;
+  text-align: center;
+  
+  color: lightgrey;
+}
+#menu-toggle {
+  background-image: url('../img/menu.png');
+}
+
+#btnSignOut {
+  background-image: url('../img/logout.png');
+}
+
+#btnSend{
+  width: 70px;
+  float: left;
+  margin-left: 5px;
+  background-color: pink;
+  border-color:pink;
+}
+
+#messageText {
+  position: relative;
+  float: left;
+  width: calc(100% - 118px);
+  bottom: 0px;
+}
+.form-group {
+  height:100%;
+}
+
+.tb {
+  height: 40px;
+  width: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-size: 20px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.friendImg{
+  float: left;
+  width: 50px;
+  height:50px;
+  margin:8px;
+  border-radius: 25px;
+  background-image: url('../img/userPhoto.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+.t{
+  float: left;
+  padding-top: 11px;
+  height:50px;
+  margin:8px;
+}
+
+.eachLine {
+  border-bottom:1px solid lightgray ;
+  height:67px;
+}
+
+.emptyDiv {
+  height:120px;
+  width: 150px;
+  margin: auto;
+  margin-top:calc((100vh - 320px)/2); 
+  
+  background-size: cover;
+  background-position: center;
+  
+  
+}
+
+#modalFooter{
+  padding: auto;
+  margin: 10px;
+}
+
+
+
+input[type="file"] {
+  display: none;
+  
+}
+
+@media(max-width:500px) {
+  .t{
+    float: none;
+    padding-top: 11px;
+    height:40px;
+    margin:0px;
+  }
+  .eachLine {
+    border-bottom:1px solid lightgray ;
+    height:105px;
+    text-align: center;
+    padding: 10px;
+  }
+  .friendImg{
+    float: none;
+    width: 50px;
+    height:50px;
+    margin:auto;
+    border-radius: 25px;
+    background-image: url('../img/userPhoto.jpg');
+    background-size: cover;
+    background-position: center;
+    
+  }
+}
+
+
+
+
+#topBar:after {
+	content:'';
+  top:0;
+	transform:translateX(100%);
+	width: 100%;
+  height: 60px;
+	position: absolute;
+	z-index:1;
+	animation: slide 2s infinite 3s;
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.8)), color-stop(99%,rgba(128,186,232,0)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%,rgba(128,186,232,0) 99%,rgba(125,185,232,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+}
+
+/* animation */
+
+@keyframes slide {
+	0% {transform:translateX(-100%);}
+	100% {transform:translateX(100%);}
+}
+
+
+
+@keyframes jump {
+  from, 20%,  80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.jump {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
