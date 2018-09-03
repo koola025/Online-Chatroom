@@ -132,7 +132,7 @@ function addGroup(event) {
                 var t = document.createElement("DIV");  
                 t.innerHTML = name;
                 if (s.val().photoURL) url = "url("+ s.val().photoURL +")";
-                else url = "url(../img/userPhoto.jpg)";
+                else url = "url(img/userPhoto.jpg)";
                 imgDiv.style.backgroundImage = url;
                 div.appendChild(imgDiv);      
                 div.appendChild(t);                                
@@ -149,7 +149,7 @@ function addGroup(event) {
         });
         if (count == 0) {
             var emptyDiv = document.createElement("DIV");
-            emptyDiv.style.backgroundImage = "url(../img/noF.png)";
+            emptyDiv.style.backgroundImage = "url(img/noF.png)";
             emptyDiv.setAttribute("class","emptyDiv");
             groupFL.appendChild(emptyDiv);
         }
@@ -383,7 +383,7 @@ function refreshFL(event) {
         });
         if (count == 0) {
             var emptyDiv = document.createElement("DIV");
-            emptyDiv.style.backgroundImage = "url(../img/noF.png)";
+            emptyDiv.style.backgroundImage = "url(img/noF.png)";
             emptyDiv.setAttribute("class","emptyDiv");
             bshow.appendChild(emptyDiv);
         }
@@ -424,7 +424,7 @@ function refreshG(event) {
         });
         if (count == 0) {
             var emptyDiv = document.createElement("DIV");
-            emptyDiv.style.backgroundImage = "url(../img/noG.png)";
+            emptyDiv.style.backgroundImage = "url(img/noG.png)";
             emptyDiv.setAttribute("class","emptyDiv");
             dshow.appendChild(emptyDiv);
         }
@@ -476,7 +476,7 @@ function goGChat(event, a) {
                     var url;
                     var childData = childSnapshot.val();
                     if (childData.senderPhoto) url = childData.senderPhoto;
-                    else url = "../img/userPhoto.jpg";
+                    else url = "img/userPhoto.jpg";
                     total_mes[total_mes.length] = str_before_username + url + middle + childData.sender + "</strong>" + childData.data + str_after_content;
                     
                     first_count += 1;
@@ -504,7 +504,7 @@ function goGChat(event, a) {
                         var url;
                     
                         if (childData.senderPhoto) url = childData.senderPhoto;
-                        else url = "../img/userPhoto.jpg";
+                        else url = "img/userPhoto.jpg";
                         total_mes[total_mes.length] = str_before_username + url + middle + childData.sender + "</strong>" + childData.data + str_after_content;
                             document.getElementById('history').innerHTML = total_mes.join('');
                             history.scrollTop = history.scrollHeight;
@@ -616,7 +616,7 @@ function goChat(event, FLID) {
                     var url;
                     var childData = childSnapshot.val();
                     if (childData.senderPhoto) url = childData.senderPhoto;
-                    else url = "../img/userPhoto.jpg";
+                    else url = "img/userPhoto.jpg";
                     total_mes[total_mes.length] = str_before_username + url + middle + childData.sender + "</strong>" + childData.data + str_after_content;
                     
                     first_count += 1;
@@ -644,7 +644,7 @@ function goChat(event, FLID) {
                         var url;
                     
                         if (childData.senderPhoto) url = childData.senderPhoto;
-                        else url = "../img/userPhoto.jpg";
+                        else url = "img/userPhoto.jpg";
                         total_mes[total_mes.length] = str_before_username + url + middle + childData.sender + "</strong>" + childData.data + str_after_content;
                             document.getElementById('history').innerHTML = total_mes.join('');
                             history.scrollTop = history.scrollHeight;
@@ -734,7 +734,7 @@ function refreshFR(event) {
                 var t = document.createElement("DIV");  
                 t.innerHTML = name;
                 if (s.val().photoURL) imgDiv.style.backgroundImage = "url("+ s.val().photoURL +")";
-                else imgDiv.style.backgroundImage = "url(../img/userPhoto.jpg)";
+                else imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)";
                 div.appendChild(imgDiv);
                 div.appendChild(t);                                
                 cshow.appendChild(div);
@@ -858,7 +858,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       console.log(user.photoURL);
       if (user.photoURL)
         userPhoto.style.backgroundImage = "url(" + user.photoURL + ")";
-        else userPhoto.style.backgroundImage = "url(../img/userPhoto.jpg)";
+        else userPhoto.style.backgroundImage = "url(img/userPhoto.jpg)";
     $("#history").empty();
     $("#ashow").empty();
     $('.collapse').collapse("hide");
@@ -886,7 +886,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             var t = document.createElement("DIV");  
             t.innerHTML = name;
             if (childSnapshot.val().photoURL) imgDiv.style.backgroundImage = "url("+ childSnapshot.val().photoURL +")";
-            else imgDiv.style.backgroundImage = "url(../img/userPhoto.jpg)";
+            else imgDiv.style.backgroundImage = "url(img/userPhoto.jpg)";
             div.appendChild(imgDiv);      
             div.appendChild(t);                                // Append the text to <button>
             ashow.appendChild(div);
@@ -904,7 +904,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
         if (count == 0) {
             var emptyDiv = document.createElement("DIV");
-            emptyDiv.style.backgroundImage = "url(../img/noU.png)";
+            emptyDiv.style.backgroundImage = "url(img/noU.png)";
             emptyDiv.setAttribute("class","emptyDiv");
             emptyDiv.setAttribute("id","emptyDivU");
             ashow.appendChild(emptyDiv);
@@ -940,7 +940,7 @@ function openModalrequest(event, a) {
         console.log(txt);
         $("#modalTitle").text(txt);
         if (snapshot.val().photoURL) url = "url(" + snapshot.val().photoURL + ")";
-        else url = "url(../img/userPhoto.jpg)";
+        else url = "url(img/userPhoto.jpg)";
         modalPic.style.backgroundImage = url;
     });
     toBeFriend = UI;
@@ -960,7 +960,7 @@ function openModal(event, a) {
         console.log(txt);
         $("#modalTitle").text(txt);
         if (snapshot.val().photoURL) url = "url(" + snapshot.val().photoURL + ")";
-        else url = "url(../img/userPhoto.jpg)";
+        else url = "url(img/userPhoto.jpg)";
         modalPic.style.backgroundImage = url;
     });
     requestFriend = UI;
@@ -1004,7 +1004,7 @@ function loginChange() {
     openFriend();    
     if (firebase.auth().currentUser.photoURL)
     userPhoto.style.backgroundImage = "url(" + firebase.auth().currentUser.photoURL + ")";
-    else userPhoto.style.backgroundImage = "url(../img/userPhoto.jpg)";
+    else userPhoto.style.backgroundImage = "url(img/userPhoto.jpg)";
     console.log("done");
     
 }
